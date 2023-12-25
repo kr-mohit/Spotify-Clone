@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
 }
 
@@ -71,11 +71,12 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     // Navigation Component
-    implementation("android.arch.navigation:navigation-fragment-ktx:1.0.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.11.0")
+    //noinspection KaptUsageInsteadOfKsp
     kapt("com.github.bumptech.glide:compiler:4.11.0")
 
     // Activity KTX for viewModels()
@@ -83,7 +84,7 @@ dependencies {
 
     // Dagger-Hilt
     implementation("com.google.dagger:hilt-android:2.48.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
 
     // Timber
     implementation("com.jakewharton.timber:timber:4.7.1")
